@@ -31,6 +31,11 @@ document.querySelector('.check').addEventListener('click', function() {
         document.querySelector('body').style.backgroundColor = '#60b347';
         document.querySelector('.number').style.width = '30rem';
         document.querySelector('.number').textContent = secretNumber;
+
+        if (score > highscore) {
+            highscore = score;
+            document.querySelector('.highscore').textContent = highscore;
+        }
     // When the number's too high
     } else if (guess > secretNumber) {
         if(score > 1){
